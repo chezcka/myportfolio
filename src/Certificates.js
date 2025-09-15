@@ -61,6 +61,19 @@ function Certificates() {
         </div>
       </header>
 
+      <section id="salesforce">
+        <h2>Salesforce</h2>
+        <p>Check out my Salesforce Trailhead badges and achievements!</p>
+        <a
+          href="https://trailhead.salesforce.com/en/me/your-profile-id"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="trailhead-btn"
+        >
+          View My Trailhead Profile
+        </a>
+      </section>
+
       <section id="certificates">
         <h2 className="section-title">Certificates</h2>
         <div className="certificates-grid">
