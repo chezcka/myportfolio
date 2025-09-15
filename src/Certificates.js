@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
 import './App.css';
 
 
@@ -51,7 +50,7 @@ function Certificates() {
         <div className="logo">Franchezcka</div>
         <nav>
           <ul className="nav-links">
-            <li><HashLink smooth to="/#about">Home</HashLink></li>
+            <li><Link to="/">Home</Link></li>
             <li><Link to="/certificates">Certificates</Link></li>
             <li><Link to="/projects">Projects</Link></li>
           </ul>

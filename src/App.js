@@ -18,7 +18,7 @@ function Home() {
         <div className="logo">Franchezcka</div>
         <nav>
           <ul className="nav-links">
-            <li><Link to="#about">Home</Link></li>
+            <li><Link to="/">Home</Link></li>
             <li><Link to="/certificates">Certificates</Link></li>
             <li><Link to="/projects">Projects</Link></li>
           </ul>
