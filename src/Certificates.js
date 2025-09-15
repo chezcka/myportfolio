@@ -65,7 +65,7 @@ function Certificates() {
         <h2>Salesforce</h2>
         <p>Check out my Salesforce Trailhead badges and achievements!</p>
         <a
-          href="https://trailhead.salesforce.com/en/me/your-profile-id"
+          href="https://www.salesforce.com/trailblazer/franchezckapascual"
           target="_blank"
           rel="noopener noreferrer"
           className="trailhead-btn"
