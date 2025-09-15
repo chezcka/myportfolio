@@ -88,48 +88,40 @@ function Projects() {
 
   return (
     <div className="projects-page">
-    <header>
-      <div className="nav-container">
-        <div className="logo">Franchezcka</div>
-        <nav>
-          <ul className="nav-links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/certificates">Certificates</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-          </ul>
-        </nav>
-        {/* Resume Button */}
-        <div className="resume-btn-container">
-          <a
-            href="/resume/PASCUAL%20-%20CV.pdf"
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="resume-btn"
-          >
-            View Resume
-          </a>
+      <header>
+        <div className="nav-container">
+          <div className="logo">Franchezcka</div>
+          <nav>
+            <ul className="nav-links">
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/certificates">Certificates</Link></li>
+              <li><Link to="/projects">Projects</Link></li>
+            </ul>
+          </nav>
+          <div className="resume-btn-container">
+            <a
+              href="/resume/PASCUAL%20-%20CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="resume-btn"
+            >
+              View Resume
+            </a>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-      {/* Websites Section */}
       <section id="projects">
-        <h2>Websites</h2>
+        <h2>Website Projects</h2>
         <div className="projects-grid">
           {renderProjects(websiteProjects)}
         </div>
-      </section>
 
-      {/* Mobile Applications Section */}
-      <section id="mobile-apps">
-        <h2>Mobile Applications</h2>
+        <h2>Mobile Apps</h2>
         <div className="projects-grid">
           {renderProjects(mobileApps)}
         </div>
-      </section>
 
-      {/* Figma Designs Section */}
-      <section id="figma-designs">
         <h2>Figma Designs</h2>
         <div className="projects-grid">
           {renderProjects(figmaDesigns, true)}

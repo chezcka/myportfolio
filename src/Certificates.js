@@ -2,25 +2,19 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
 
-
 function Certificates() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImage, setModalImage] = useState('');
   const [modalTitle, setModalTitle] = useState('');
 
-  // Open modal
   const openModal = (src, title) => {
     setModalImage(src);
     setModalTitle(title);
     setIsModalOpen(true);
   };
 
-  // Close modal
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const closeModal = () => setIsModalOpen(false);
 
-  // Certificates data
   const certificates = [
     { src: '/photos/ess-tools-for-appdev.jpg', title: 'Essential Tools for Application Development' },
     { src: '/photos/angular-for-frontend-engineers.png', title: 'Angular for Frontend Engineers' },
@@ -44,47 +38,29 @@ function Certificates() {
 
   return (
     <div className="certificates-page">
-      {/* ===== Header ===== */}
-    <header>
-      <div className="nav-container">
-        <div className="logo">Franchezcka</div>
-        <nav>
-          <ul className="nav-links">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/certificates">Certificates</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-          </ul>
-        </nav>
-        {/* Resume Button */}
-        <div className="resume-btn-container">
-          <a
-            href="/resume/PASCUAL%20-%20CV.pdf"
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="resume-btn"
-          >
-            View Resume
-          </a>
+      <header>
+        <div className="nav-container">
+          <div className="logo">Franchezcka</div>
+          <nav>
+            <ul className="nav-links">
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/certificates">Certificates</Link></li>
+              <li><Link to="/projects">Projects</Link></li>
+            </ul>
+          </nav>
+          <div className="resume-btn-container">
+            <a
+              href="/resume/PASCUAL%20-%20CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="resume-btn"
+            >
+              View Resume
+            </a>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
 
-      {/* ===== Salesforce Badges Section ===== */}
-      <section id="salesforce-badges">
-        <h2 className="section-title">Salesforce Badges</h2>
-        <div className="trailhead-button-container">
-          <a
-            href="https://www.salesforce.com/trailblazer/franchezckapascual"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="trailhead-btn"
-          >
-            Click here to view
-          </a>
-        </div>
-      </section>
-
-      {/* ===== Certificates Section ===== */}
       <section id="certificates">
         <h2 className="section-title">Certificates</h2>
         <div className="certificates-grid">
@@ -101,10 +77,9 @@ function Certificates() {
         </div>
       </section>
 
-      {/* ===== Modal Popup ===== */}
       {isModalOpen && (
         <div className="modal" onClick={closeModal}>
-          <div className="modal-inner" onClick={(e) => e.stopPropagation()}>
+          <div className="modal-inner" onClick={e => e.stopPropagation()}>
             <span className="close" onClick={closeModal}>&times;</span>
             <img className="modal-content" src={modalImage} alt="Certificate Preview" />
             <div id="caption">{modalTitle}</div>
@@ -112,7 +87,6 @@ function Certificates() {
         </div>
       )}
 
-      {/* ===== Footer ===== */}
       <footer className="footer">
         <p>© 2025 Franchezcka Giannah Mari Pascual | Portfolio</p>
       </footer>
