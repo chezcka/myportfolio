@@ -69,7 +69,7 @@ function Projects() {
   const renderProjects = (projects, isFigma = false) => (
     projects.map((project, index) => (
       <div className="project-card" key={index}>
-        <img src={project.img} alt={project.title} />
+        <img src={process.env.PUBLIC_URL + project.img} alt={project.title} />
         <div className="project-info">
           <h3>{project.title}</h3>
           <p>{project.desc}</p>
@@ -100,7 +100,7 @@ function Projects() {
           </nav>
           <div className="resume-btn-container">
             <a
-              href="/resume/PASCUAL%20-%20CV.pdf"
+              href={process.env.PUBLIC_URL + "/resume/PASCUAL - CV.pdf"}
               target="_blank"
               rel="noopener noreferrer"
               className="resume-btn"

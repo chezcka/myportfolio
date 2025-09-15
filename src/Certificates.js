@@ -50,7 +50,7 @@ function Certificates() {
           </nav>
           <div className="resume-btn-container">
             <a
-              href="/resume/PASCUAL%20-%20CV.pdf"
+              href={process.env.PUBLIC_URL + "/resume/PASCUAL - CV.pdf"}
               target="_blank"
               rel="noopener noreferrer"
               className="resume-btn"
@@ -68,10 +68,10 @@ function Certificates() {
             <div
               className="certificate-item"
               key={index}
-              onClick={() => openModal(cert.src, cert.title)}
+              onClick={() => openModal(process.env.PUBLIC_URL + cert.src, cert.title)}
             >
               <h3 className="certificate-title">{cert.title}</h3>
-              <img src={cert.src} alt={cert.title} />
+              <img src={process.env.PUBLIC_URL + cert.src} alt={cert.title} />
             </div>
           ))}
         </div>

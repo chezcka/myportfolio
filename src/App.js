@@ -20,7 +20,7 @@ function Home() {
           </nav>
           <div className="resume-btn-container">
             <a
-              href="/resume/PASCUAL%20-%20CV.pdf"
+              href={process.env.PUBLIC_URL + "/resume/PASCUAL - CV.pdf"}
               target="_blank" 
               rel="noopener noreferrer"
               className="resume-btn"
@@ -35,7 +35,10 @@ function Home() {
       <section className="hero" id="about">
         <div className="hero-container">
           <div className="hero-photo">
-            <img src="/photos/chez-pic-2.png" alt="Portrait of Franchezcka" />
+            <img
+              src={process.env.PUBLIC_URL + "/photos/chez-pic-2.png"}
+              alt="Portrait of Franchezcka"
+            />
           </div>
           <div className="hero-text">
             <h1>Hi, I'm Franchezcka</h1>
@@ -100,7 +103,7 @@ function Home() {
               <li>Collaborated with the design team, translated UI/UX wireframes and design into functional web pages.</li>
               <li>Integrated JavaScript to add interactivity, such as form validation and dynamic content updates.</li>
               <li>Worked closely with backend developers to ensure seamless integration of frontend components.</li>
-              <li>Participated in code reviews and maintained effective communication with team members to meetproject requirements and resolve issues promptly.</li>
+              <li>Participated in code reviews and maintained effective communication with team members to meet project requirements and resolve issues promptly.</li>
             </ul>
           </div>
         </div>
